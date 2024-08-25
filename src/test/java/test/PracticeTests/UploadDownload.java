@@ -1,6 +1,8 @@
 package test.PracticeTests;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +29,7 @@ public class UploadDownload {
 		System.out.println("Fruit: "+fruit);
 		
 		//Download File
-		driver.findElement(By.cssSelector("#downloadButton")).click();
+		//driver.findElement(By.cssSelector("#downloadButton")).click();
 		System.out.println("File Downloaded Successfully");
 		
 		//Upload File
@@ -40,9 +42,26 @@ public class UploadDownload {
 		Assert.assertEquals("Updated Excel Data Successfully.", uploadSuccessText.getText());
 		wait.until(ExpectedConditions.invisibilityOf(uploadSuccessText));
 		
+		
+		
+		//Get price of Column items
+		List<WebElement> list =  driver.findElements(By.cssSelector(".sc-hIPBNq.eXWrwD div div:nth-child(2)"));
+//		
+//		List<String> newList = list.stream().filter(s -> s.getText().contains("Almond")).map(s -> getVeggiePrice(s))
+//				.collect(Collectors.toList());
+		List<String> newList = list.stream().map(s -> s.getText()).collect(Collectors.toList());
+		
+		System.out.println("\n"+"Fruits :"+"\n") ;
+		newList.forEach(s->System.out.println(s));
+		
 		Thread.sleep(3000);
 		
 		driver.quit();
+	}
+
+	private static String getVeggiePrice(WebElement s) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

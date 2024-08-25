@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-24T22:51:12 IST" name="Default suite" finished-at="2024-08-24T22:51:21 IST" duration-ms="9399">
+  <suite started-at="2024-08-26T00:02:29 IST" name="Default suite" finished-at="2024-08-26T00:02:34 IST" duration-ms="4676">
     <groups>
     </groups>
-    <test started-at="2024-08-24T22:51:12 IST" name="Default test" finished-at="2024-08-24T22:51:21 IST" duration-ms="9399">
+    <test started-at="2024-08-26T00:02:29 IST" name="Default test" finished-at="2024-08-26T00:02:34 IST" duration-ms="4676">
       <class name="test.PracticeTests.WebTableHandling">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.PracticeTests.WebTableHandling@128d2484]" started-at="2024-08-24T22:51:12 IST" name="setUp" finished-at="2024-08-24T22:51:15 IST" duration-ms="3367" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.PracticeTests.WebTableHandling@4c583ecf]" started-at="2024-08-26T00:02:29 IST" name="setUp" finished-at="2024-08-26T00:02:31 IST" duration-ms="1914" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="getRowsAndColumnsExceptLast()[pri:0, instance:test.PracticeTests.WebTableHandling@128d2484]" started-at="2024-08-24T22:51:15 IST" name="getRowsAndColumnsExceptLast" finished-at="2024-08-24T22:51:21 IST" duration-ms="5623" status="PASS">
+        <test-method signature="updatedWebTableHandling()[pri:0, instance:test.PracticeTests.WebTableHandling@4c583ecf]" started-at="2024-08-26T00:02:31 IST" name="updatedWebTableHandling" finished-at="2024-08-26T00:02:34 IST" duration-ms="2570" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getRowsAndColumnsExceptLast -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.PracticeTests.WebTableHandling@128d2484]" started-at="2024-08-24T22:51:21 IST" name="tearDown" finished-at="2024-08-24T22:51:21 IST" duration-ms="312" status="PASS">
+        </test-method> <!-- updatedWebTableHandling -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.PracticeTests.WebTableHandling@4c583ecf]" started-at="2024-08-26T00:02:34 IST" name="tearDown" finished-at="2024-08-26T00:02:34 IST" duration-ms="138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

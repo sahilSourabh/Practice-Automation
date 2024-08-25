@@ -5,9 +5,9 @@
     <classes>
       <class name="test.PracticeTests.WebTableHandling">
         <methods>
+          <include name="updatedWebTableHandling"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="getRowsAndColumns"/>
         </methods>
       </class> <!-- test.PracticeTests.WebTableHandling -->
     </classes>
