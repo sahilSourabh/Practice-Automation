@@ -1,9 +1,6 @@
 package test.PracticeTests;
 
 import java.time.Duration;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,13 +17,13 @@ public class UploadDownload {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
+		String fruit ="Apple";
+		
 		driver.get("https://rahulshettyacademy.com/upload-download-test/");
 		
 		WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(5));
 //		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".justify-content-center"))));
 //		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("(//div[@id='cell-2-undefined'])[2]"))));
-		String fruit = driver.findElement(By.xpath("(//div[@id='cell-2-undefined'])[2]")).getText();
-		System.out.println("Fruit: "+fruit);
 		
 		//Download File
 		//driver.findElement(By.cssSelector("#downloadButton")).click();
@@ -35,33 +32,25 @@ public class UploadDownload {
 		//Upload File
 		driver.findElement(By.id("fileinput")).sendKeys("C:\\Users\\Sourabh Sahil\\Downloads\\download.xlsx");
 		
-		//wait for success messsage to appear and dissappear
+		//Wait for Success messsage to Appear and Dissappear
 		WebElement uploadSuccessText = driver.findElement(By.cssSelector(".Toastify__toast-body"));
 		wait.until(ExpectedConditions.visibilityOf(uploadSuccessText));
 		System.out.println(uploadSuccessText.getText());
 		Assert.assertEquals("Updated Excel Data Successfully.", uploadSuccessText.getText());
 		wait.until(ExpectedConditions.invisibilityOf(uploadSuccessText));
 		
+		//Get Price of Particular Fruit Dynamically
+		String priceSection = driver.findElement(By.xpath("//div[text()='Price']/parent::div")).getAttribute("data-column-id");
+		
+		String actualPrice = driver
+				.findElement(By.xpath("//div[text()='"+fruit+"']/parent::div/parent::div/div[@id='cell-"+priceSection+"-undefined']"))
+				.getText();
+		System.out.println("Price of "+fruit+": "+actualPrice);
 		
 		
-		//Get price of Column items
-		List<WebElement> list =  driver.findElements(By.cssSelector(".sc-hIPBNq.eXWrwD div div:nth-child(2)"));
-//		
-//		List<String> newList = list.stream().filter(s -> s.getText().contains("Almond")).map(s -> getVeggiePrice(s))
-//				.collect(Collectors.toList());
-		List<String> newList = list.stream().map(s -> s.getText()).collect(Collectors.toList());
 		
-		System.out.println("\n"+"Fruits :"+"\n") ;
-		newList.forEach(s->System.out.println(s));
-		
-		Thread.sleep(3000);
-		
+		Thread.sleep(1000);
 		driver.quit();
-	}
-
-	private static String getVeggiePrice(WebElement s) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }
