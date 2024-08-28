@@ -17,7 +17,7 @@ public class UploadDownload {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
-		String fruit ="Apple";
+		String fruit ="Kivi";
 		
 		driver.get("https://rahulshettyacademy.com/upload-download-test/");
 		

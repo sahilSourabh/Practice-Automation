@@ -20,11 +20,17 @@ public class DynamicTest {
 		driver.findElement(By.id("password")).sendKeys(password);
 		driver.findElement(By.cssSelector("#login-button")).click();
 		
-		String itemPrice = driver.findElement(By.xpath("//div[4]//div[@class='inventory_item_price']")).getText();
-		String itemName = driver.findElement(By.xpath("//div[4]//div[@class=\"inventory_item_name\"]")).getText();
-		System.out.println("Price of "+"'"+itemName+"'"+": "+ itemPrice);
+		String item = "Sauce Labs Fleece Jacket";
+
+		String itemPrice = driver.findElement(By.xpath("//div[text()='" + item
+				+ "']/parent::a/parent::div/following-sibling::div[@class='pricebar']//div[@class='inventory_item_price']"))
+				.getText();
+		// String itemPrice = driver.findElement(By.xpath("//div[4]//div[@class='inventory_item_price']")).getText();
+	    //String itemName = driver.findElement(By.xpath("//div[4]//div[@class='inventory_item_name']")).getText();
+		System.out.println("Price of "+"'"+item+"'"+": "+ itemPrice);
 		
 		driver.findElement(By.cssSelector("div:nth-child(4) button")).click();
+		Thread.sleep(1000);
 		
 		//Dealing with SVG elements
 		driver.findElement(By.xpath("//*[name()='svg']")).click();
