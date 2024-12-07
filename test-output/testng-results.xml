@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-28T22:07:40 IST" name="Default suite" finished-at="2024-08-28T22:07:55 IST" duration-ms="14706">
+  <suite started-at="2024-12-07T00:24:30 IST" name="Default suite" finished-at="2024-12-07T00:24:31 IST" duration-ms="804">
     <groups>
     </groups>
-    <test started-at="2024-08-28T22:07:40 IST" name="Default test" finished-at="2024-08-28T22:07:55 IST" duration-ms="14706">
-      <class name="test.PracticeTests.MiscTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.PracticeTests.MiscTests@4d5d943d]" started-at="2024-08-28T22:07:40 IST" name="setUp" finished-at="2024-08-28T22:07:46 IST" duration-ms="5519" status="PASS">
+    <test started-at="2024-12-07T00:24:30 IST" name="Default test" finished-at="2024-12-07T00:24:31 IST" duration-ms="804">
+      <class name="test.PracticeExcelDataDriving.DataProviderTest">
+        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@623a8092]" started-at="2024-12-07T00:24:31 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-07T00:24:31 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hello]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[text]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="svgElementHandling()[pri:0, instance:test.PracticeTests.MiscTests@4d5d943d]" started-at="2024-08-28T22:07:46 IST" name="svgElementHandling" finished-at="2024-08-28T22:07:54 IST" duration-ms="8652" status="PASS">
+        </test-method> <!-- testcaseData -->
+        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@623a8092]" started-at="2024-12-07T00:24:31 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-07T00:24:31 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bye]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[call]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- svgElementHandling -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.PracticeTests.MiscTests@4d5d943d]" started-at="2024-08-28T22:07:54 IST" name="tearDown" finished-at="2024-08-28T22:07:55 IST" duration-ms="419" status="PASS">
+        </test-method> <!-- testcaseData -->
+        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@623a8092]" started-at="2024-12-07T00:24:31 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-07T00:24:31 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[welcome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[message]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[33]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- test.PracticeTests.MiscTests -->
+        </test-method> <!-- testcaseData -->
+      </class> <!-- test.PracticeExcelDataDriving.DataProviderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
