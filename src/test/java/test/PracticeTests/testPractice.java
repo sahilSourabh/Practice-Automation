@@ -1,100 +1,51 @@
 package test.PracticeTests;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.time.Duration;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class testPractice {
 
-public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String[] args) throws InterruptedException {
 		
-	
+		WebDriver driver =  new ChromeDriver();
 		
-		String fruit ="orange";
-		String fileName = "C:\\Users\\Sourabh Sahil\\Downloads\\download.xlsx";
-		String columnName = "price";
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://www.saucedemo.com/v1/");
 		
+		String username = "standard_user";
+		String password = "secret_sauce";
+		
+		driver.findElement(By.id("user-name")).sendKeys(username);
+		driver.findElement(By.id("password")).sendKeys(password);
+		driver.findElement(By.cssSelector("#login-button")).click();
+		
+		//Dynamically locate product and add to the cart
+		String productName = "Sauce Labs Onesie";
 
+		String itemPrice = driver.findElement(By.xpath("//div[text()='"+productName+"']"
+				+ "/parent::a/parent::div/parent::div[@class='inventory_item']//div[@class='pricebar']/div"))
+				.getText();
+		System.out.println("Price of "+productName+" : "+itemPrice);
 		
-		//Edit excel-> Get column number of "price"-> Get row number of "Apple"-> Update Excel with row and column
+		driver.findElement(By.xpath(
+				"//div[text()='"+productName+"']/parent::a/parent::div/following-sibling::div//button[.='ADD TO CART']"))
+				.click();
+		WebElement cartButton = driver.findElement(By.xpath("//*[name()='svg' and @data-icon='shopping-cart']"));
 		
-		int column = getColumnNumber(fileName,columnName);
-		System.out.println("Column number of "+columnName+" : "+column);
-		//System.out.println(getrowNumber(fileName,fruit));
-		int row = getrowNumber(fileName,fruit);
-		System.out.println("Row number of "+fruit+" : "+row);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)",cartButton);
+		Thread.sleep(2000);
 		
-		
-	}
+		cartButton.click();
 
-	//Edit excel-> Get column number of "price"-> Get row number of "Apple"-> Update Excel with row and column
-	
-	private static int getrowNumber(String fileName, String fruitName) throws IOException {
-		
-		FileInputStream fis = new FileInputStream(fileName);
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		
-		XSSFSheet sheet = workbook.getSheet("Sheet1");
-		
-		ArrayList<String> al = new ArrayList<>();
-		Iterator<Row> rows = sheet.rowIterator();
-		Row firstRow = rows.next();
-		//Row firstRow = sheet.getRow(0);
-		
-		int rowNumber =0, r=1;
-		int k=1, columnIndex=0;
-
-		Iterator<Cell> cells = firstRow.cellIterator();
-		while(cells.hasNext()) {
-			
-			if(cells.next().getStringCellValue().equalsIgnoreCase("fruit_name")) {
-				
-				columnIndex = k;
-			} k++;
-		}
-		
-		while(rows.hasNext()) {
-			
-			Row row = rows.next();
-			if(row.getCell(columnIndex).getStringCellValue().equalsIgnoreCase(fruitName)) {
-				
-				rowNumber = r;
-					
-				} r++;
-			}
-		return rowNumber;
-			
-		}
-		
-
-	private static int getColumnNumber(String fileName, String column) throws IOException {
-		
-		FileInputStream fis = new FileInputStream(fileName);
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		
-		XSSFSheet sheet = workbook.getSheet("Sheet1");
-		
-		Iterator<Row> rows = sheet.rowIterator();
-		Row firstRow = rows.next();
-		//Row firstRow = sheet.getRow(0);
-		
-		int k=1, columnIndex=0;
-		Iterator<Cell> cells = firstRow.cellIterator();
-		while(cells.hasNext()) {
-			
-			if(cells.next().getStringCellValue().equalsIgnoreCase(column)) {
-				
-				columnIndex = k;
-			} k++;
-		}
-		
-		return (columnIndex);
+		Thread.sleep(2000);
+		driver.close();
 	}
 
 }

@@ -27,7 +27,7 @@ public class UploadDownload {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		String fruit ="Apple";
+		String fruit ="Kivi";
 		String fileName = "C:\\Users\\Sourabh Sahil\\Downloads\\download.xlsx";
 		String columnName = "price";
 		String updatedValue = "360";
@@ -45,6 +45,10 @@ public class UploadDownload {
 		
 		//Edit excel-> Get column number of "price"-> Get row number of "Apple"-> Update Excel with row and column
 		
+		//Edit excel->Update Excel for Price of a fruit
+		/* 1) Get the row of the Fruit
+		   2) Get the cell/column value of price in that row  */
+		 
 		int column = getColumnNumber(fileName,columnName);
 		System.out.println("Column number of "+columnName+" : "+column);
 		int row = getrowNumber(fileName,fruit);
@@ -67,6 +71,7 @@ public class UploadDownload {
 		//Get Price of Particular Fruit Dynamically
 		String priceSection = driver.findElement(By.xpath("//div[text()='Price']/parent::div")).getAttribute("data-column-id");
 	
+		//String actualPrice =driver.findElement(By.xpath("//div[text()='" + fruitName+"']/""parent::div/following-sibling::div[@id='cell-" + price+ "-undefined']")).getText();
 		String actualPrice = driver
 				.findElement(By.xpath("//div[text()='"+fruit+"']/parent::div/parent::div/div[@id='cell-"+priceSection+"-undefined']"))
 				.getText();

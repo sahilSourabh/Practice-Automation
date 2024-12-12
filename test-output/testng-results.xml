@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-07T00:24:30 IST" name="Default suite" finished-at="2024-12-07T00:24:31 IST" duration-ms="804">
+  <suite started-at="2024-12-11T22:21:48 IST" name="Default suite" finished-at="2024-12-11T22:21:49 IST" duration-ms="1550">
     <groups>
     </groups>
-    <test started-at="2024-12-07T00:24:30 IST" name="Default test" finished-at="2024-12-07T00:24:31 IST" duration-ms="804">
+    <test started-at="2024-12-11T22:21:48 IST" name="Default test" finished-at="2024-12-11T22:21:49 IST" duration-ms="1550">
       <class name="test.PracticeExcelDataDriving.DataProviderTest">
-        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@623a8092]" started-at="2024-12-07T00:24:31 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-07T00:24:31 IST" duration-ms="11" status="PASS">
+        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@6a2b953e]" started-at="2024-12-11T22:21:49 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-11T22:21:49 IST" duration-ms="20" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcaseData -->
-        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@623a8092]" started-at="2024-12-07T00:24:31 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-07T00:24:31 IST" duration-ms="2" status="PASS">
+        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@6a2b953e]" started-at="2024-12-11T22:21:49 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-11T22:21:49 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcaseData -->
-        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@623a8092]" started-at="2024-12-07T00:24:31 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-07T00:24:31 IST" duration-ms="2" status="PASS">
+        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@6a2b953e]" started-at="2024-12-11T22:21:49 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-11T22:21:49 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>

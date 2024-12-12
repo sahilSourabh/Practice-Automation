@@ -1,7 +1,9 @@
 package test.PracticeTests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DynamicTest {
@@ -20,22 +22,32 @@ public class DynamicTest {
 		driver.findElement(By.id("password")).sendKeys(password);
 		driver.findElement(By.cssSelector("#login-button")).click();
 		
-		String item = "Sauce Labs Fleece Jacket";
+		String productName = "Sauce Labs Fleece Jacket";
 
-		String itemPrice = driver.findElement(By.xpath("//div[text()='" + item
-				+ "']/parent::a/parent::div/following-sibling::div[@class='pricebar']//div[@class='inventory_item_price']"))
+//		String itemPrice = driver.findElement(By.xpath("//div[text()='" + productName
+//				+ "']/parent::a/parent::div/following-sibling::div[@class='pricebar']//div[@class='inventory_item_price']"))
+//				.getText();
+		String itemPrice = driver.findElement(By.xpath("//div[text()='"+productName+"']"
+				+ "/parent::a/parent::div/parent::div[@class='inventory_item']//div[@class='pricebar']/div"))
 				.getText();
 		// String itemPrice = driver.findElement(By.xpath("//div[4]//div[@class='inventory_item_price']")).getText();
 	    //String itemName = driver.findElement(By.xpath("//div[4]//div[@class='inventory_item_name']")).getText();
-		System.out.println("Price of "+"'"+item+"'"+": "+ itemPrice);
+		System.out.println("Price of "+"'"+productName+"'"+": "+ itemPrice);
 		
-		driver.findElement(By.cssSelector("div:nth-child(4) button")).click();
-		Thread.sleep(1000);
+		//Add Product to the Cart
+		driver.findElement(By.xpath(
+				"//div[text()='"+productName+"']/parent::a/parent::div/following-sibling::div//button[.='ADD TO CART']"))
+				.click();
 		
 		//Dealing with SVG elements
-		driver.findElement(By.xpath("//*[name()='svg']")).click();
+		WebElement cartButton = driver.findElement(By.xpath("//*[name()='svg' and @data-icon='shopping-cart']"));
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)",cartButton);
 		Thread.sleep(2000);
 		
+		cartButton.click();
+		Thread.sleep(2000);
 		driver.findElement(By.cssSelector(".btn_action.checkout_button")).click();
 		Thread.sleep(2000);
 		
