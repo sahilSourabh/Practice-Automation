@@ -1,0 +1,9 @@
+[DEBUG] 2025-01-26 00:11:27.440 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2025-01-26 00:11:27.448 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2025-01-26 00:11:27.847 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata
+[DEBUG] 2025-01-26 00:11:27.969 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2025-01-26 00:11:27.975 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2025-01-26 00:11:27.991 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata
+[DEBUG] 2025-01-26 00:11:28.023 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2025-01-26 00:11:28.026 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2025-01-26 00:11:28.036 [main] POIXMLFactory - using default POIXMLDocumentPart for http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata

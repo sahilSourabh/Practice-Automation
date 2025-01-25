@@ -1,76 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-11T22:21:48 IST" name="Default suite" finished-at="2024-12-11T22:21:49 IST" duration-ms="1550">
+  <suite started-at="2025-01-25T19:21:55 IST" name="Default suite" finished-at="2025-01-25T19:22:03 IST" duration-ms="7764">
     <groups>
     </groups>
-    <test started-at="2024-12-11T22:21:48 IST" name="Default test" finished-at="2024-12-11T22:21:49 IST" duration-ms="1550">
-      <class name="test.PracticeExcelDataDriving.DataProviderTest">
-        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@6a2b953e]" started-at="2024-12-11T22:21:49 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-11T22:21:49 IST" duration-ms="20" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hello]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[text]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[11]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-01-25T19:21:55 IST" name="Default test" finished-at="2025-01-25T19:22:03 IST" duration-ms="7764">
+      <class name="test.PracticeTests.DisabledElementHandling">
+        <test-method signature="disabledButtonHandling()[pri:0, instance:test.PracticeTests.DisabledElementHandling@77602954]" started-at="2025-01-25T19:21:55 IST" name="disabledButtonHandling" finished-at="2025-01-25T19:22:03 IST" duration-ms="7720" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcaseData -->
-        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@6a2b953e]" started-at="2024-12-11T22:21:49 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-11T22:21:49 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[bye]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[call]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[22]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcaseData -->
-        <test-method signature="testcaseData(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.PracticeExcelDataDriving.DataProviderTest@6a2b953e]" started-at="2024-12-11T22:21:49 IST" name="testcaseData" data-provider="getData" finished-at="2024-12-11T22:21:49 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[welcome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[message]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[33]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcaseData -->
-      </class> <!-- test.PracticeExcelDataDriving.DataProviderTest -->
+        </test-method> <!-- disabledButtonHandling -->
+      </class> <!-- test.PracticeTests.DisabledElementHandling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

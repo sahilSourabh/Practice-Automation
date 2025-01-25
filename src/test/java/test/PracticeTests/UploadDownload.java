@@ -27,7 +27,7 @@ public class UploadDownload {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		String fruit ="Kivi";
+		String fruit ="mango";
 		String fileName = "C:\\Users\\Sourabh Sahil\\Downloads\\download.xlsx";
 		String columnName = "price";
 		String updatedValue = "360";
@@ -91,6 +91,7 @@ public class UploadDownload {
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		
+		//rows and columns are kept one less because getRow() and getCell() follows 0-based indexing.
 		Row rowField = sheet.getRow(row-1);
 		Cell cellField = rowField.getCell(column-1);
 		cellField.setCellValue(updatedValue);
@@ -122,11 +123,13 @@ public class UploadDownload {
 			while(cells.hasNext()) {
 				
 				Cell cell = cells.next();
-				if(cell.getCellType()==CellType.STRING && cell.getStringCellValue().equalsIgnoreCase(fruitName)) {
+				if( cell.getCellType()==CellType.STRING && cell.getStringCellValue().equalsIgnoreCase(fruitName) ) {
 					
 					rowNumber = k;
+					break;
 				} 
-			} k++;
+			} 
+			k++;
 
 		} 
 		
@@ -153,7 +156,9 @@ public class UploadDownload {
 			if(cells.next().getStringCellValue().equalsIgnoreCase(column)) {
 				
 				columnIndex = k;
-			} k++;
+				break;
+			} 
+			k++;
 		}
 		
 		return (columnIndex);

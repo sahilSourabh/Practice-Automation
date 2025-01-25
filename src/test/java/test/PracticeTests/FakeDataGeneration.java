@@ -1,10 +1,16 @@
 package test.PracticeTests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import net.datafaker.Faker;
 
 public class FakeDataGeneration {
 
 	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
 		
 		Faker faker =  new Faker();
 		
@@ -17,6 +23,8 @@ public class FakeDataGeneration {
 		System.out.println("First Name: "+ firstName);
 		System.out.println("Male First Name: "+ mname);
 		System.out.println("Female First Name: "+ fname);
+		
+		//driver.findElement(By.name("firstname")).sendKeys(faker.name().firstName());
 
 	}
 

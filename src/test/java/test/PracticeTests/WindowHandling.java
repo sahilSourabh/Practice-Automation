@@ -23,7 +23,7 @@ public class WindowHandling {
 		driver.navigate().to("https://rahulshettyacademy.com/");
 		driver.findElement(By.xpath("(//a[@href='practice-project'])[1]")).click();
 		
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		
 		driver.quit();
 	}

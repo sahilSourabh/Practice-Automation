@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.PracticeExcelDataDriving.DataProviderTest">
+      <class name="test.PracticeTests.WebTableHandling3">
         <methods>
-          <include name="testcaseData"/>
+          <include name="columnPresenceCheck"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- test.PracticeExcelDataDriving.DataProviderTest -->
+      </class> <!-- test.PracticeTests.WebTableHandling3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
