@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse--498077903\testng-customsuite.xml</span>
+                    <span>C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse-1711868744\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.LoginWithMultipleSetsOfData" class="method navigator-link" hash-for-method="verifyLoginCredentials(bothincorrect, abc@gmail.com, passwd)">verifyLoginCredentials(bothincorrect, abc@gmail.com, passwd)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.DisabledElementHandling" class="method navigator-link" hash-for-method="disabledButtonHandling">disabledButtonHandling</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.LoginWithMultipleSetsOfData" class="method navigator-link" hash-for-method="verifyLoginCredentials(passwordincorrect, sakinala@gmail.com, passwd)">verifyLoginCredentials(passwordincorrect, sakinala@gmail.com, passwd)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.LoginWithMultipleSetsOfData" class="method navigator-link" hash-for-method="verifyLoginCredentials(bothcorrect, sakinala@gmail.com, p@ssword)">verifyLoginCredentials(bothcorrect, sakinala@gmail.com, p@ssword)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.LoginWithMultipleSetsOfData" class="method navigator-link" hash-for-method="verifyLoginCredentials(usernameincorrect, abc@gmail.com, p@ssword)">verifyLoginCredentials(usernameincorrect, abc@gmail.com, p@ssword)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -118,17 +142,88 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.PracticeTests.DisabledElementHandling</span>
+              <img src="failed.png"/>
+              <span class="class-name">test.PracticeTests.LoginWithMultipleSetsOfData</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="disabledButtonHandling">
-                  </a> <!-- disabledButtonHandling -->
-                  <span class="method-name">disabledButtonHandling</span>
+                  <a name="verifyLoginCredentials(bothincorrect, abc@gmail.com, passwd)">
+                  </a> <!-- verifyLoginCredentials(bothincorrect, abc@gmail.com, passwd) -->
+                  <span class="method-name">verifyLoginCredentials</span>
+                  <span class="parameters">(bothincorrect,abc@gmail.com,passwd)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [No customer account found] but found [The credentials provided are incorrect]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials(LoginWithMultipleSetsOfData.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.PracticeTests.LoginWithMultipleSetsOfData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginCredentials(passwordincorrect, sakinala@gmail.com, passwd)">
+                  </a> <!-- verifyLoginCredentials(passwordincorrect, sakinala@gmail.com, passwd) -->
+                  <span class="method-name">verifyLoginCredentials</span>
+                  <span class="parameters">(passwordincorrect,sakinala@gmail.com,passwd)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginCredentials(bothcorrect, sakinala@gmail.com, p@ssword)">
+                  </a> <!-- verifyLoginCredentials(bothcorrect, sakinala@gmail.com, p@ssword) -->
+                  <span class="method-name">verifyLoginCredentials</span>
+                  <span class="parameters">(bothcorrect,sakinala@gmail.com,p@ssword)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginCredentials(usernameincorrect, abc@gmail.com, p@ssword)">
+                  </a> <!-- verifyLoginCredentials(usernameincorrect, abc@gmail.com, p@ssword) -->
+                  <span class="method-name">verifyLoginCredentials</span>
+                  <span class="parameters">(usernameincorrect,abc@gmail.com,p@ssword)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +231,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse--498077903\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse-1711868744\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +240,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.PracticeTests.DisabledElementHandling&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;disabledButtonHandling&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.PracticeTests.DisabledElementHandling --&gt;
+      &lt;class name=&quot;test.PracticeTests.LoginWithMultipleSetsOfData&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +280,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'disabledButtonHandling')
-data.setCell(0, 2, 'test.PracticeTests.DisabledElementHandling')
-data.setCell(0, 3, 7720);
+data.setCell(0, 1, 'verifyLoginCredentials')
+data.setCell(0, 2, 'test.PracticeTests.LoginWithMultipleSetsOfData')
+data.setCell(0, 3, 6966);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyLoginCredentials')
+data.setCell(1, 2, 'test.PracticeTests.LoginWithMultipleSetsOfData')
+data.setCell(1, 3, 4841);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyLoginCredentials')
+data.setCell(2, 2, 'test.PracticeTests.LoginWithMultipleSetsOfData')
+data.setCell(2, 3, 4794);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyLoginCredentials')
+data.setCell(3, 2, 'test.PracticeTests.LoginWithMultipleSetsOfData')
+data.setCell(3, 3, 4769);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -213,16 +316,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">test.PracticeTests.DisabledElementHandling</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">disabledTextboxHandling</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -231,11 +327,41 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.PracticeTests.DisabledElementHandling</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.PracticeTests.LoginWithMultipleSetsOfData</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">disabledButtonHandling</span>
+                <span class="method-name">verifyLoginCredentials(bothcorrect, sakinala@gmail.com, p@ssword)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">6969 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginCredentials(bothincorrect, abc@gmail.com, passwd)</span>
+                <span class="method-start">9215 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">14060 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginCredentials(usernameincorrect, abc@gmail.com, p@ssword)</span>
+                <span class="method-start">16240 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">21011 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginCredentials(passwordincorrect, sakinala@gmail.com, passwd)</span>
+                <span class="method-start">23178 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27975 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
