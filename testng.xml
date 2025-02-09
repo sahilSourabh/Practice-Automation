@@ -3,14 +3,14 @@
 <suite name="Suite">
 	
 	<listeners>
-		<listener class-name="test.TestComponents.Listeners"></listener>
+		<listener class-name="test.Listeners.MyListener"/>
+		
+		<listener class-name="test.Listeners.RetryListener"/>
 	</listeners>
 	
   <test thread-count="5" name="Test">
     <classes>
-      
       <class name="test.PracticeTests.LoginWithMultipleSetsOfData"/>
- 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 02 00:15:15 IST 2025</td>
+<td>Started on:</td><td>Sun Feb 09 02:24:42 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30195 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2178 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,21 +76,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials()'><b>verifyLoginCredentials</b><br>Test class: test.PracticeTests.LoginWithMultipleSetsOfData<br>Parameters: bothincorrect, abc@gmail.com, passwd</td>
-<td><div><pre>java.lang.AssertionError: expected [No customer account found] but found [The credentials provided are incorrect]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials(LoginWithMultipleSetsOfData.java:39)
+<td title='test.PracticeTests.SendEmail.tearDown()'><b>tearDown</b><br>Test class: test.PracticeTests.SendEmail</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at test.TestComponents.BasePage.tearDown(BasePage.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -113,21 +112,20 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1020397237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1020397237'><pre>java.lang.AssertionError: expected [No customer account found] but found [The credentials provided are incorrect]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials(LoginWithMultipleSetsOfData.java:39)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1776409896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1776409896'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at test.TestComponents.BasePage.tearDown(BasePage.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
@@ -151,8 +149,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>4</td>
-<td>test.PracticeTests.LoginWithMultipleSetsOfData@7dda48d9</td></tr>
+<td>2</td>
+<td>test.PracticeTests.SendEmail@5656be13</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -163,20 +161,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials()'><b>verifyLoginCredentials</b><br>Test class: test.PracticeTests.LoginWithMultipleSetsOfData<br>Parameters: passwordincorrect, sakinala@gmail.com, passwd</td>
+<td title='test.PracticeTests.SendEmail.noSendingMailsonPass()'><b>noSendingMailsonPass</b><br>Test class: test.PracticeTests.SendEmail</td>
 <td></td>
-<td>4</td>
-<td>test.PracticeTests.LoginWithMultipleSetsOfData@7dda48d9</td></tr>
-<tr>
-<td title='test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials()'><b>verifyLoginCredentials</b><br>Test class: test.PracticeTests.LoginWithMultipleSetsOfData<br>Parameters: bothcorrect, sakinala@gmail.com, p@ssword</td>
-<td></td>
-<td>6</td>
-<td>test.PracticeTests.LoginWithMultipleSetsOfData@7dda48d9</td></tr>
-<tr>
-<td title='test.PracticeTests.LoginWithMultipleSetsOfData.verifyLoginCredentials()'><b>verifyLoginCredentials</b><br>Test class: test.PracticeTests.LoginWithMultipleSetsOfData<br>Parameters: usernameincorrect, abc@gmail.com, p@ssword</td>
-<td></td>
-<td>4</td>
-<td>test.PracticeTests.LoginWithMultipleSetsOfData@7dda48d9</td></tr>
+<td>0</td>
+<td>test.PracticeTests.SendEmail@5656be13</td></tr>
 </table><p>
 </body>
 </html>

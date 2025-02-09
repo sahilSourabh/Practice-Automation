@@ -5,7 +5,7 @@ import java.io.File;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class ExtentReportsNG {
+public class ExtentManager {
 	
 	public static ExtentReports getReportObject() {
 		
