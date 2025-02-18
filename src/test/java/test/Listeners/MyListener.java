@@ -90,6 +90,8 @@ public class MyListener extends BaseTest implements ITestListener{
 		
 		extent.flush();
 		System.out.println("Test Execution Finished: "+ context.getName());
+		
+		sendMailWithAttachments();
 	}
 	
 	private void attachScreenshot(ITestResult result, Status status) {

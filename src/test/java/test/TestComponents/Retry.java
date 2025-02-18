@@ -5,7 +5,6 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.Status;
 
-import test.resources.ExtentManager;
 
 public class Retry implements IRetryAnalyzer {
 	
@@ -19,8 +18,6 @@ public class Retry implements IRetryAnalyzer {
 			
 			retryCount++;
 			//System.out.println("Retrying failed test: " + result.getName() + " (Retry " + retryCount + ")");
-			
-			//ExtentManager.getTest().log(Status.WARNING, "Retrying test: " + result.getName() + " (Retry " + retryCount + ")");
 			
 			return true;
 		}

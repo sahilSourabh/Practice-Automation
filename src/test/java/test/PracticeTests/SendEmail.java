@@ -30,7 +30,9 @@ public class SendEmail extends BaseTest{
 		
 		if(result.getStatus()==ITestResult.FAILURE) {
 			
-			sendEmail();
+			//sendSimpleEmail();
+			sendMailWithAttachments();
+			
 			
 			System.out.println("Test has been Failed and Email is sent");
 		}
