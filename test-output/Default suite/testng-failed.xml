@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.PracticeTests.SendEmail">
+      <class name="test.PracticeTests.DisabledElementHandling">
         <methods>
-          <include name="sendEmailOnFailure"/>
-          <include name="testExample"/>
-          <include name="tearDown"/>
+          <include name="disabledButtonHandling"/>
         </methods>
-      </class> <!-- test.PracticeTests.SendEmail -->
+      </class> <!-- test.PracticeTests.DisabledElementHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
