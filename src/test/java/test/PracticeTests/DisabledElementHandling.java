@@ -8,18 +8,33 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DisabledElementHandling {
 
 public static WebDriver driver; 
-	
+
+	@Parameters("Browser")
 	@BeforeTest(alwaysRun=true)
-	public void setUp() {
+	public void setUp(String browserName) {
 		
-		driver = new ChromeDriver();
+		if(browserName.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+		}
+		else if(browserName.equalsIgnoreCase("edge")) {
+			driver = new EdgeDriver();
+			
+		}
+		else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+			
+		}
+		
 		driver.manage().window().maximize();
 		//driver.manage().window().setSize(new Dimension(1024, 768));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

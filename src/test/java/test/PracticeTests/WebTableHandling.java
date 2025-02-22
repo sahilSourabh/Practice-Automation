@@ -120,7 +120,7 @@ public class WebTableHandling {
 			List<WebElement> Columns = row.findElements(By.tagName("td"));
 			
 		//Getting all Columns except Last column
-			for(int i=0; i<Columns.size()-1; i++) {
+			for(int i=0; i < Columns.size()-1; i++) {
 				
 				System.out.print(Columns.get(i).getText()+ "\t");
 			}
