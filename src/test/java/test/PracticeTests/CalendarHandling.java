@@ -1,10 +1,14 @@
 package test.PracticeTests;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,7 +18,7 @@ import test.TestComponents.BaseTest;
 public class CalendarHandling extends BaseTest{
 	
 	WebDriver driver;
-	String calendarDate ="31-December-2002";
+	String calendarDate ="32-December-2002";
 	String[] dateValues = calendarDate.split("-");
 	String day= dateValues[0];
 	String month= dateValues[1];
@@ -64,15 +68,24 @@ public class CalendarHandling extends BaseTest{
 		
 		int totalWeekDays = 7;
 		boolean flag = false;
+		WebElement dateElement;
+		String dateValue="";
 		
-		for(int rowNum=2; rowNum<=6; rowNum++) {
+		for(int rowNum=2; rowNum<=7; rowNum++) {
 			
 			for(int column=1; column<=totalWeekDays; column++) {
-//				WebElement dateElement = driver.findElement(By.xpath(beforeXpath+ rowNum +aftereXpath+ column +"]"));
-				WebElement dateElement = driver.findElement
-						(By.xpath("//*[@id='crmcalendar']/table/tbody/tr[2]/td/table/tbody/tr["+rowNum+"]/td["+column+ "]"));
 				
-				String dateValue = dateElement.getText();
+				try {
+//					WebElement dateElement = driver.findElement(By.xpath(beforeXpath+ rowNum +aftereXpath+ column +"]"));
+					dateElement = driver.findElement
+							(By.xpath("//*[@id='crmcalendar']/table/tbody/tr[2]/td/table/tbody/tr["+rowNum+"]/td["+column+ "]"));
+					dateValue = dateElement.getText();
+				} 
+				catch(NoSuchElementException e) {
+					System.out.println("The date is not present, please enter correct date value");
+					flag=false;
+					break;
+				}
 				
 				if(dateValue.equals(day)) {
 					
@@ -86,7 +99,5 @@ public class CalendarHandling extends BaseTest{
 			}
 		}	
 	}
-	
-
 	
 }
