@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.PracticeTests.DisabledElementHandling">
+      <class name="test.PracticeTests.CalendarHandling">
         <methods>
-          <include name="disabledButtonHandling"/>
+          <include name="handlingCalendar2"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- test.PracticeTests.DisabledElementHandling -->
+      </class> <!-- test.PracticeTests.CalendarHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

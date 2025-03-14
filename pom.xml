@@ -131,9 +131,9 @@
           <configuration>
 			  <suiteXmlFiles>testng.xml</suiteXmlFiles>
 			  
-			  <systemPropertyVariables>
+			<!--   <systemPropertyVariables>
 				  <browser>${Browser}</browser>
-			  </systemPropertyVariables>
+			  </systemPropertyVariables> -->
 			  
 		  </configuration>
         </plugin>

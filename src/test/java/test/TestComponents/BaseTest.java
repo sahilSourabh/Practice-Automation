@@ -1,7 +1,6 @@
 package test.TestComponents;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
@@ -20,12 +19,15 @@ import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class BaseTest extends BasePage {
-
+	
 	public static String getScreenshotPath(String testcaseName, WebDriver driver)  {
 
 		String reportPath = System.getProperty("user.dir") + "//reports//" + testcaseName + ".png";
@@ -120,6 +122,33 @@ public class BaseTest extends BasePage {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void selectByVisibleText(WebElement ele, String name) {
+		Select options = new Select(ele);
+		options.selectByVisibleText(name);
+	}
+	public static void selectByValue(WebElement ele, String value) {
+		Select options = new Select(ele);
+		options.selectByValue(value);
+	}
+	
+	public static void selectCalendarYear(String year) throws InterruptedException {
+		
+		WebElement yrDropdown =  driver.findElement(By.xpath("//select[@class='select' and @name='slctYear']"));
+		selectByValue(yrDropdown, year);
+		sleep(2);
+	}
+	public static void selectCalendarMonth(String month) throws InterruptedException {
+		
+		WebElement mnthDropdown =  driver.findElement(By.xpath("//select[@class='select' and @name='slctMonth']"));
+		selectByVisibleText(mnthDropdown, month);
+		sleep(2);
+	}
+	
+	public static void sleep(long seconds) throws InterruptedException {
+		
+		Thread.sleep(seconds*1000);
 	}
 
 }

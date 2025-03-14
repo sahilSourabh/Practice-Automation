@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 
 public class BasePage {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	public WebDriver initializeDriver() {
 

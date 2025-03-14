@@ -19,27 +19,38 @@ public class DisabledElementHandling {
 
 public static WebDriver driver; 
 
-	@Parameters("Browser")
-	@BeforeTest(alwaysRun=true)
-	public void setUp(String browserName) {
-		
-		if(browserName.equalsIgnoreCase("chrome")) {
-			driver = new ChromeDriver();
-		}
-		else if(browserName.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
-			
-		}
-		else if (browserName.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-			
-		}
-		
-		driver.manage().window().maximize();
-		//driver.manage().window().setSize(new Dimension(1024, 768));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		}
 
+
+	//@Parameters("Browser")
+//	@BeforeTest(alwaysRun=true)
+//	public void setUp(String browserName) {
+//		
+//		if(browserName.equalsIgnoreCase("chrome")) {
+//			driver = new ChromeDriver();
+//		}
+//		else if(browserName.equalsIgnoreCase("edge")) {
+//			driver = new EdgeDriver();
+//			
+//		}
+//		else if (browserName.equalsIgnoreCase("firefox")) {
+//			driver = new FirefoxDriver();
+//			
+//		}
+//		
+//		driver.manage().window().maximize();
+//		//driver.manage().window().setSize(new Dimension(1024, 768));
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//		}
+
+	
+	@BeforeTest(alwaysRun = true)
+	public void setUp() {
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		// driver.manage().window().setSize(new Dimension(1024, 768));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	}
 	
 	@Test
 	public static void disabledTextboxHandling() throws InterruptedException {
@@ -68,8 +79,9 @@ public static WebDriver driver;
 		System.out.println("Box Size: "+ boxSizeCssValue);
 		System.out.println("Font Family: "+ fontFamilyCssValue);
 	}
+	
 
-	@Test
+	//@Test
 	public static void disabledButtonHandling() {
 		
 		try {
