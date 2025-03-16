@@ -18,7 +18,7 @@ import test.TestComponents.BaseTest;
 public class CalendarHandling extends BaseTest{
 	
 	WebDriver driver;
-	String calendarDate ="32-December-2002";
+	String calendarDate ="21-December-2002";
 	String[] dateValues = calendarDate.split("-");
 	String day= dateValues[0];
 	String month= dateValues[1];

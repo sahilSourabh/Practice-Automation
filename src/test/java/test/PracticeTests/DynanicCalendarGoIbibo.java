@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
 
 import test.TestComponents.BaseTest;
 
-public class testPractice extends BaseTest {
-
-	String calendarDate = "21-December-2025";
+public class DynanicCalendarGoIbibo extends BaseTest{
+	
+	String calendarDate = "9-November-2025";
 	String[] dateValues = calendarDate.split("-");
 	String date = dateValues[0];
 	String month = dateValues[1];
@@ -41,10 +41,11 @@ public class testPractice extends BaseTest {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='sc-12foipm-16 wfIEw']")));
 
+		//click on Departure
 		WebElement departureDate = driver
 				.findElement(By.xpath("//div[@class='sc-12foipm-20 jPzQOy']//span[text()='Departure']"));
 		departureDate.click();
-
+		//Wait for Calendar to be visible
 		WebElement Calendar = driver.findElement(By.cssSelector(".DayPicker-Caption div"));
 		wait.until(ExpectedConditions.visibilityOf(Calendar));
 
@@ -52,23 +53,34 @@ public class testPractice extends BaseTest {
 
 	}
 
-	public static String[] getMonthYear(String monthYearValue) {
-		return monthYearValue.split(" "); // e.g. March 2025
-	}
+//	public static String[] getMonthYear(String monthYearValue) {
+//		return monthYearValue.split(" "); // e.g. March 2025
+//	}
 
 	public void selectDate(String exDate, String exMonth, String exYear) throws InterruptedException {
 
 		WebElement monthYearEle = driver.findElement(By.xpath("//div[@class='DayPicker-Caption']/div"));
 		String currentMonthYear = monthYearEle.getText();          //March 2025
 
-		while ( !(getMonthYear(currentMonthYear)[0].equals(exMonth) && getMonthYear(currentMonthYear)[1].equals(exYear)) ) {
+//		while ( !(getMonthYear(currentMonthYear)[0].equals(exMonth) && getMonthYear(currentMonthYear)[1].equals(exYear)) )
+		while ( !(currentMonthYear.contains(exMonth) && currentMonthYear.contains(exYear)) ) {
 
 			WebElement nextButton = driver.findElement(By.cssSelector(".DayPicker-NavButton--next"));
 			nextButton.click();
 			currentMonthYear = monthYearEle.getText();
 		}
 		sleep(2);
-		driver.findElement(By.xpath("//div[@class='DayPicker-Day']/p[text()='" + exDate + "']")).click();		
+		//Selecting the Date
+//		driver.findElement(By.xpath("//div[@class='DayPicker-Day']/p[text()='" + exDate + "']")).click();
+		List<WebElement> dates = driver.findElements(By.cssSelector(".DayPicker-Day"));
+		
+		for (WebElement date : dates) {
+			
+			if (date.getText().equals(exDate) && !date.getAttribute("aria-disabled").equals("true")) {
+				date.click();
+				break;
+			}
+		}
 	}
 
 }
