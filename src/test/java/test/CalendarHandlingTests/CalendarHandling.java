@@ -1,15 +1,10 @@
-package test.PracticeTests;
+package test.CalendarHandlingTests;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,7 +12,6 @@ import test.TestComponents.BaseTest;
 
 public class CalendarHandling extends BaseTest{
 	
-	WebDriver driver;
 	String calendarDate ="21-December-2002";
 	String[] dateValues = calendarDate.split("-");
 	String day= dateValues[0];
@@ -51,7 +45,7 @@ public class CalendarHandling extends BaseTest{
 			
 			if(dayVal.getText().equalsIgnoreCase(day)) {
 				dayVal.click();
-				sleep(2);
+				break;
 			}
 		}	
 	}
@@ -100,4 +94,19 @@ public class CalendarHandling extends BaseTest{
 		}	
 	}
 	
+	
+	public static void selectCalendarYear(String year) throws InterruptedException {
+
+		WebElement yrDropdown = driver.findElement(By.xpath("//select[@class='select' and @name='slctYear']"));
+		selectByValue(yrDropdown, year);
+		sleep(2);
+	}
+
+	public static void selectCalendarMonth(String month) throws InterruptedException {
+
+		WebElement mnthDropdown = driver.findElement(By.xpath("//select[@class='select' and @name='slctMonth']"));
+		selectByVisibleText(mnthDropdown, month);
+		sleep(2);
+	}
+
 }

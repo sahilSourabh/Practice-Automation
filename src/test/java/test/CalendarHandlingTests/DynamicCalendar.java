@@ -1,8 +1,9 @@
-package test.PracticeTests;
+package test.CalendarHandlingTests;
 
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -68,5 +69,19 @@ public class DynamicCalendar extends BaseTest {
 		}
 		
 		driver.findElement(By.xpath("//a[text()='"+exDate+"']")).click();
+	}
+	
+	@Test
+	public void handlingDynamicCalendarJS() throws InterruptedException {
+		
+		WebElement date = driver.findElement(By.id("datepicker"));
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String dateValue = "18/10/2025";
+		js.executeScript("arguments[0].value=arguments[1];", date,dateValue); 
+		sleep(2);
+		driver.findElement(By.xpath("//input[@id='datepicker' and @class='hasDatepicker']")).click();
+		
+			
 	}
 }

@@ -133,18 +133,6 @@ public class BaseTest extends BasePage {
 		options.selectByValue(value);
 	}
 	
-	public static void selectCalendarYear(String year) throws InterruptedException {
-		
-		WebElement yrDropdown =  driver.findElement(By.xpath("//select[@class='select' and @name='slctYear']"));
-		selectByValue(yrDropdown, year);
-		sleep(2);
-	}
-	public static void selectCalendarMonth(String month) throws InterruptedException {
-		
-		WebElement mnthDropdown =  driver.findElement(By.xpath("//select[@class='select' and @name='slctMonth']"));
-		selectByVisibleText(mnthDropdown, month);
-		sleep(2);
-	}
 	
 	public static void sleep(long seconds) throws InterruptedException {
 		

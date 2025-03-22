@@ -1,9 +1,10 @@
-package test.PracticeTests;
+package test.CalendarHandlingTests;
 
 import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -81,6 +82,31 @@ public class DynanicCalendarGoIbibo extends BaseTest{
 				break;
 			}
 		}
+	}
+	
+	@Test
+	public void selectCalendarDateByJS() throws InterruptedException {
+
+		System.out.println(driver.getTitle());
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-id='auth-flow-section']")));
+		// Closing the signIn notification
+		driver.findElement(By.xpath("//span[@class='sc-koXPp bDtzaf']")).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='sc-12foipm-16 wfIEw']")));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+//        String script = "document.querySelector(\"p.czGBLf\").innerText = \"18 Mar'25\";";
+//        js.executeScript(script);
+		
+
+     // Locate the date element inside the calendar
+        WebElement dateElement = driver.findElement(By.xpath("//p[contains(@class, 'fswWidgetTitle')]"));
+        String newDate = "20 Mar'25";
+        js.executeScript("arguments[0].innerText = arguments[1];", dateElement, newDate);
+        sleep(2);
+
 	}
 
 }
