@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import test.TestComponents.BaseTest;
 
-public class CalendarHandlingMisc extends BaseTest {
+public class CalendarPreviousAndFutureDates extends BaseTest {
 
 	String calendarDate ="27-March-2026";
 	String[] dateValues = calendarDate.split("-");
@@ -49,14 +49,7 @@ public class CalendarHandlingMisc extends BaseTest {
 		selectDate(date, month, year);
 	
 	}
-//	Selecting previous month dates and future dates
-	public void calendarSelectingPreviousAndFutureDates() {
-		
-		
-		
-		
-		
-	}
+
 	public static void selectDate(String exDate, String exMonth, String exYear) throws InterruptedException {
 
 		String monthVal= driver.findElement(By.xpath("//div[@class='flatpickr-current-month']")).getText();
@@ -70,14 +63,16 @@ public class CalendarHandlingMisc extends BaseTest {
 			WebElement nextButton = driver.findElement(By.cssSelector(".flatpickr-next-month"));
 			nextButton.click();
 			
-			 monthVal= driver.findElement(By.xpath("//div[@class='flatpickr-current-month']")).getText();
-			 yearElement = driver.findElement(By.xpath("//input[@class='numInput cur-year']"));
-	         yearVal = yearElement.getAttribute("value");
+			monthVal= driver.findElement(By.xpath("//div[@class='flatpickr-current-month']")).getText();
+			yearElement = driver.findElement(By.xpath("//input[@class='numInput cur-year']"));
+	        yearVal = yearElement.getAttribute("value");
 		}
 
-//		.flatpickr-day:not(.prevMonthDay):not(.nextMonthDay):not(.flatpickr-day.disabled)
+//		.flatpickr-day:not(.prevMonthDay):not(.nextMonthDay):not(.disabled)
+//		span[contains(@class, 'flatpickr-day') and not(contains(@class, 'prevMonthDay'))
+//		    and not(contains(@class, 'nextMonthDay')) and not(contains(@class, 'disabled'))]"
 		driver.findElement(By.xpath("//div[@class='flatpickr-days']//span[@class='flatpickr-day today' or @class='flatpickr-day ']"
-				+ "[contains(text(),'"+ exDate + "')]")).click();
+				+ "[contains(text(),'"+exDate+"')]")).click();
 
 	}
 

@@ -10,7 +10,7 @@ public class BasePage {
 	
 	public static WebDriver driver;
 
-	public WebDriver initializeDriver() {
+	public static WebDriver initializeDriver() {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();

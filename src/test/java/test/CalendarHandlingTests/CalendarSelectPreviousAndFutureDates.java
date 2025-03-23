@@ -18,7 +18,7 @@ import test.TestComponents.BaseTest;
 
 public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 
-	String calendarDate = "03-11-2022";
+	String calendarDate = "06-07-2026";
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 	LocalDate eDate = LocalDate.parse(calendarDate, formatter);
 	int date = eDate.getDayOfMonth();
@@ -48,6 +48,8 @@ public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 		
 		
 	}
+	
+	
 	public static String[] getMonthYear(String monthYearValue) {
 		return monthYearValue.split(" ");    //e.g. March 2025
 	}
@@ -64,12 +66,12 @@ public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 		String aYearText = getMonthYear(monthYear)[1];
 		int aYear = Integer.parseInt(aYearText);
 		
-		while( exMonth< aMonth || exYear< aYear) {
+		while(exMonth < aMonth || exYear < aYear) {
 			
 			WebElement prevButton = driver.findElement(By.cssSelector("a[class*='ui-datepicker-prev'][title='Prev']"));
 			prevButton.click();
-			monthYear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
 			
+			monthYear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
 			aMonthText = getMonthYear(monthYear)[0];
 //			aMonth = DateTimeFormatter.ofPattern("MMMM", Locale.ENGLISH).parse(aMonthText).get(ChronoField.MONTH_OF_YEAR);
 			aMonth = Month.valueOf(aMonthText.toUpperCase()).getValue();
@@ -81,8 +83,8 @@ public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 
 			WebElement nextButton = driver.findElement(By.cssSelector("a[class*='ui-datepicker-next'][title='Next']"));
 			nextButton.click();
+			
 			monthYear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
-
 			aMonthText = getMonthYear(monthYear)[0];
 //			aMonth = DateTimeFormatter.ofPattern("MMMM", Locale.ENGLISH).parse(aMonthText).get(ChronoField.MONTH_OF_YEAR);
 			aMonth = Month.valueOf(aMonthText.toUpperCase()).getValue();

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-22T23:37:48 IST" name="Default suite" finished-at="2025-03-22T23:38:07 IST" duration-ms="19279">
+  <suite started-at="2025-03-23T20:52:18 IST" name="Default suite" finished-at="2025-03-23T20:52:36 IST" duration-ms="17611">
     <groups>
     </groups>
-    <test started-at="2025-03-22T23:37:48 IST" name="Default test" finished-at="2025-03-22T23:38:07 IST" duration-ms="19279">
-      <class name="test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates@6aaceffd]" started-at="2025-03-22T23:37:48 IST" name="setUp" finished-at="2025-03-22T23:37:57 IST" duration-ms="9266" status="PASS">
+    <test started-at="2025-03-23T20:52:18 IST" name="Default test" finished-at="2025-03-23T20:52:36 IST" duration-ms="17611">
+      <class name="test.CalendarHandlingTests.CalendarDifferentTypesHandling">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CalendarHandlingTests.CalendarDifferentTypesHandling@57250572]" started-at="2025-03-23T20:52:18 IST" name="setUp" finished-at="2025-03-23T20:52:26 IST" duration-ms="7638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="calendarSelectingPreviousAndFutureDates()[pri:0, instance:test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates@6aaceffd]" started-at="2025-03-22T23:37:57 IST" name="calendarSelectingPreviousAndFutureDates" finished-at="2025-03-22T23:38:05 IST" duration-ms="7589" status="PASS">
+        <test-method signature="calendarHandlingFourthDate()[pri:0, instance:test.CalendarHandlingTests.CalendarDifferentTypesHandling@57250572]" started-at="2025-03-23T20:52:26 IST" name="calendarHandlingFourthDate" finished-at="2025-03-23T20:52:33 IST" duration-ms="7205" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- calendarSelectingPreviousAndFutureDates -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates@6aaceffd]" started-at="2025-03-22T23:38:05 IST" name="tearDown" finished-at="2025-03-22T23:38:07 IST" duration-ms="2339" status="PASS">
+        </test-method> <!-- calendarHandlingFourthDate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CalendarHandlingTests.CalendarDifferentTypesHandling@57250572]" started-at="2025-03-23T20:52:33 IST" name="tearDown" finished-at="2025-03-23T20:52:36 IST" duration-ms="2615" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates -->
+      </class> <!-- test.CalendarHandlingTests.CalendarDifferentTypesHandling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates">
+      <class name="test.CalendarHandlingTests.CalendarDifferentTypesHandling">
         <methods>
-          <include name="setUp"/>
-          <include name="calendarSelectingPreviousAndFutureDates"/>
+          <include name="calendarHandlingFifthDate"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- test.CalendarHandlingTests.CalendarSelectPreviousAndFutureDates -->
+      </class> <!-- test.CalendarHandlingTests.CalendarDifferentTypesHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
