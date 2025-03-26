@@ -19,22 +19,27 @@ public class testPractice extends BaseTest {
 	public void setUp() {
 		
 		driver = initializeDriver();
-		driver.get("https://seleniumpractise.blogspot.com/search?q=calendar");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		
 	}
 	
 	@Test
 	public void handlingDynamicCalendarJS() throws InterruptedException {
 		
-		WebElement date = driver.findElement(By.id("datepicker"));
+		driver.get("https://www.google.com/");
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String dateValue = "18/10/2025";
-		js.executeScript("arguments[0].value=arguments[1];", date,dateValue); 
+		js.executeScript("prompt('Please enter the name:');"); 
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.alertIsPresent());
+        
+		driver.switchTo().alert().sendKeys("Sahil");
 		sleep(2);
-		driver.findElement(By.xpath("//input[@id='datepicker' and @class='hasDatepicker']")).click();
+		driver.switchTo().alert().accept();
+		String enteredValue = (String) js.executeScript("return window.promptResult;");
+        System.out.println("Entered value: " + enteredValue);
+		
 		
 			
 	}

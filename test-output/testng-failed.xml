@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.CalendarHandlingTests.CalendarDifferentTypesHandling">
+      <class name="test.PracticeTests.JSExecutorTest">
         <methods>
-          <include name="calendarHandlingFifthDate"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="javascriptExecutorTests"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- test.CalendarHandlingTests.CalendarDifferentTypesHandling -->
+      </class> <!-- test.PracticeTests.JSExecutorTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

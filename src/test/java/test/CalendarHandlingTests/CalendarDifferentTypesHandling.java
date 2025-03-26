@@ -77,7 +77,6 @@ public class CalendarDifferentTypesHandling extends BaseTest{
 	@Test
 	public void calendarHandlingFifthDate() throws InterruptedException {
 		
-		
 		WebElement fifthDate = driver.findElement(By.id("fifth_date_picker"));
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;

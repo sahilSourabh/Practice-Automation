@@ -18,7 +18,7 @@ import test.TestComponents.BaseTest;
 
 public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 
-	String calendarDate = "06-07-2026";
+	String calendarDate = "26-03-2024";
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 	LocalDate eDate = LocalDate.parse(calendarDate, formatter);
 	int date = eDate.getDayOfMonth();
@@ -31,8 +31,7 @@ public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 		driver = initializeDriver();
 		driver.get("https://seleniumpractise.blogspot.com/search?q=calendar");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
 	}
 	
 //	Selecting previous month dates and future dates
@@ -45,10 +44,8 @@ public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("ui-datepicker-div"))));
 		
 		selectDate(date, month, year);
-		
-		
-	}
 	
+	}
 	
 	public static String[] getMonthYear(String monthYearValue) {
 		return monthYearValue.split(" ");    //e.g. March 2025
@@ -94,8 +91,4 @@ public class CalendarSelectPreviousAndFutureDates extends BaseTest{
 		
 		driver.findElement(By.xpath("//a[text()='"+exDate+"']")).click();
 	}
-	
-	
-
-	
 }

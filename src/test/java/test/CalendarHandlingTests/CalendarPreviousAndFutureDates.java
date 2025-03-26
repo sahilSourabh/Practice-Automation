@@ -47,7 +47,6 @@ public class CalendarPreviousAndFutureDates extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".flatpickr-innerContainer")));
 		
 		selectDate(date, month, year);
-	
 	}
 
 	public static void selectDate(String exDate, String exMonth, String exYear) throws InterruptedException {
