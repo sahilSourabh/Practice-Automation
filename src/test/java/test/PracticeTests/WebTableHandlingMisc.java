@@ -1,6 +1,5 @@
 package test.PracticeTests;
 
-
 import java.time.Duration;
 import java.util.List;
 
@@ -15,17 +14,17 @@ import org.testng.annotations.Test;
 
 import test.TestComponents.BaseTest;
 
-public class testPractice extends BaseTest {
+public class WebTableHandlingMisc extends BaseTest {
 
-	String columnName = "Price";
-	String itemName = "Carrot";
+	String columnName = "Discount Price";
+	String itemName = "Rice";
 	
 	@BeforeTest(alwaysRun = true)
 	public void setUp() {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.setExperimentalOption("w3c", true);  // Forces W3C mode
-//		options.addArguments("headless");
+		options.addArguments("headless");
 		
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
@@ -167,6 +166,8 @@ public class testPractice extends BaseTest {
 					// Print the value of the target column
 					if(columnIndex < cellValues.size()) {
 						
+//						WebElement priceCell = row.findElement(By.xpath("td["+(columnIndex+1)+"]"));
+//						String columnValue = priceCell.getText();
 						String columnValue = cellValues.get(columnIndex).getText();
 						System.out.println(columnName+" Column value for "+itemName+": "+ columnValue);
 					}
