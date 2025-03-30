@@ -27,6 +27,8 @@ public class JSExecutorTest extends BaseTest{
 	public void javascriptExecutorTests() throws InterruptedException {
 		
 		WebElement loginButton = driver.findElement(By.cssSelector("input[value*='Login']"));
+		// Highlighting an element
+		changeColor(loginButton, "rgb(0,100,0)");
 		// Drawing border around a WebElement
 		drawBorderAroundElementTest(loginButton);
 		// Custom Alert Generation
@@ -44,6 +46,13 @@ public class JSExecutorTest extends BaseTest{
 		scrollPageDown();
 		
 		
+	}
+	
+	public static void changeColor(WebElement element, String color) throws InterruptedException {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].style.background='"+color+"';", element);
+		sleep(2);	
 	}
 	
 	public static void drawBorderAroundElementTest(WebElement element) throws InterruptedException {

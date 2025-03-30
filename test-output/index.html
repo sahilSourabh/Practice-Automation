@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse-1292414760\testng-customsuite.xml</span>
+                    <span>C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse--853196006\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.JSExecutorTest" class="method navigator-link" hash-for-method="javascriptExecutorTests">javascriptExecutorTests</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.PracticeTests.testPractice" class="method navigator-link" hash-for-method="searchItemInAllPages">searchItemInAllPages</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.PracticeTests.JSExecutorTest</span>
+              <span class="class-name">test.PracticeTests.testPractice</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="javascriptExecutorTests">
-                  </a> <!-- javascriptExecutorTests -->
-                  <span class="method-name">javascriptExecutorTests</span>
+                  <a name="searchItemInAllPages">
+                  </a> <!-- searchItemInAllPages -->
+                  <span class="method-name">searchItemInAllPages</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse-1292414760\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse--853196006\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.PracticeTests.JSExecutorTest&quot;&gt;
+      &lt;class name=&quot;test.PracticeTests.testPractice&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;javascriptExecutorTests&quot;/&gt;
+          &lt;include name=&quot;searchItemInAllPages&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.PracticeTests.JSExecutorTest --&gt;
+      &lt;/class&gt; &lt;!-- test.PracticeTests.testPractice --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -191,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'javascriptExecutorTests')
-data.setCell(0, 2, 'test.PracticeTests.JSExecutorTest')
-data.setCell(0, 3, 12618);
+data.setCell(0, 1, 'searchItemInAllPages')
+data.setCell(0, 2, 'test.PracticeTests.testPractice')
+data.setCell(0, 3, 689);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 689 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -213,9 +213,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">test.PracticeTests.testPractice</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">getColumnValuesForParticularRow</span>
+                <br/>
+                <span class="ignored-method-name">getRowsAndColumns</span>
+                <br/>
+                <span class="ignored-method-name">getHeadingRowValues</span>
+                <br/>
+                <span class="ignored-method-name">getParticularColumnValuesForItem</span>
+                <br/>
+                <span class="ignored-method-name">getParticularColumnValues</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -224,18 +239,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.PracticeTests.JSExecutorTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.PracticeTests.testPractice</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">javascriptExecutorTests</span>
-                <span class="method-start">15519 ms</span>
+                <span class="method-name">searchItemInAllPages</span>
+                <span class="method-start">3967 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">28149 ms</span>
+                <span class="method-start">4660 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

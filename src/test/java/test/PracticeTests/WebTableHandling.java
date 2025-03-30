@@ -63,6 +63,7 @@ public class WebTableHandling {
 		
 		List<WebElement> list = driver.findElements(By.cssSelector(".sc-hIPBNq.eXWrwD div div:nth-child(2)"));
 
+		// Getting a Particular Column items
 		List<String> fruitList = list.stream().map(s -> s.getText()).collect(Collectors.toList());
 
 		System.out.println("\n" + "Fruits :" + "\n");

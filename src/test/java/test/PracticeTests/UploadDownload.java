@@ -27,7 +27,7 @@ public class UploadDownload {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		String fruit ="mango";
+		String fruit ="Mango";
 		String fileName = "C:\\Users\\Sourabh Sahil\\Downloads\\download.xlsx";
 		String columnName = "price";
 		String updatedValue = "360";
@@ -76,9 +76,7 @@ public class UploadDownload {
 				.findElement(By.xpath("//div[text()='"+fruit+"']/parent::div/parent::div/div[@id='cell-"+priceSection+"-undefined']"))
 				.getText();
 		System.out.println("Price of "+fruit+": "+actualPrice);
-		
-		
-		
+
 		Thread.sleep(2000);
 		driver.quit();
 	}

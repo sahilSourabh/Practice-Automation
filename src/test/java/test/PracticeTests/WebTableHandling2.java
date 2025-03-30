@@ -95,6 +95,7 @@ public class WebTableHandling2 {
             System.out.println("Column with name '" + columnName + "' not found.");
             return;
         }
+        System.out.println(columnName+" is found at Column index: "+columnIndex);
         
         List<WebElement> rows = table.findElements(By.cssSelector(".sc-jsEeTM.itluUR.rdt_TableRow"));
 
