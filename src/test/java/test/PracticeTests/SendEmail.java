@@ -1,6 +1,7 @@
 package test.PracticeTests;
 
 import org.apache.commons.mail.EmailException;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -11,8 +12,8 @@ import test.TestComponents.BaseTest;
 import test.mails.SendSimpleEmails;
 
 public class SendEmail extends BaseTest{
-	
-	
+
+
 	@Test(priority=1)
 	public static void testExample() {
 		

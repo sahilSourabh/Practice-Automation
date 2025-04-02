@@ -1,6 +1,9 @@
 package test.TestComponents;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
@@ -19,14 +22,27 @@ import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest extends BasePage {
+	
+	public static WebDriverWait wait;
+	public static long TIMEOUT_IN_SECONDS = 10;
+	public static String TESTSHEET_PATH = "S://Automation//TestData.xlsx";
+	
 	
 	public static String getScreenshotPath(String testcaseName, WebDriver driver)  {
 
@@ -138,5 +154,82 @@ public class BaseTest extends BasePage {
 		
 		Thread.sleep(seconds*1000);
 	}
+	
+	// Wait for element to be visible
+    public static WebElement waitForElementVisiblity(By locator) {
+    	
+		wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_IN_SECONDS));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    
+    public static WebDriver waitForframeAvailablityAndSwitchToIt(String frame) {
+    	wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_IN_SECONDS));
+        return wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
+    }
+//   ----------------------------------------------------------------------------------------------------------------
+    
+    public static Object[][] getObjectTestData(Object [][] data) throws IOException {	
+		return data;	
+	} 
+    
+    // Get data from Excel File into your DataProvider array
+    public static Object[][] getExcelTestData(String sheetName) throws IOException {
+    	
+    	FileInputStream fis = new FileInputStream(TESTSHEET_PATH);
+    	XSSFWorkbook workbook = new XSSFWorkbook(fis);
+    	XSSFSheet sheet = workbook.getSheet(sheetName);
+    	
+    	int totalRows = sheet.getLastRowNum()+1;                   // Convert index to count
+    	int totalColumns = sheet.getRow(0).getLastCellNum();
+    	
+    	Object[][] data = new Object[totalRows-1][totalColumns];         //(totalRows-1) since we are not taking header row
+    	
+    	for(int i=1; i<totalRows ;i++ ) {              // Start from 1 to skip the header row
+    		
+    		for(int j=0; j<totalColumns; j++) {
+    			
+    			Cell cell = sheet.getRow(i).getCell(j, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);     // Handle NULL cells
+    			data[i-1][j] = getCellType(cell);
+    			
+    			// [i-1] because we skipped the header row, the first row of data should start from index 0 in your array
+    		}
+    	}
+    	workbook.close();
+    	fis.close();
+    	
+    	return data;
+    }
+    
+  // Handles different cell types (e.g., STRING, NUMERIC, BOOLEAN, FORMULA, BLANK)
+    public static Object getCellType(Cell cell) {
+    	
+    	switch(cell.getCellType()) {
+    	
+    	case STRING :
+    		return cell.getStringCellValue();
+    		
+    	case NUMERIC:
+    		// Check if a cell contains a date, since dates are stored internally in Excel as double values.
+    		if(DateUtil.isCellDateFormatted(cell)) {  
+    			return cell.getDateCellValue();
+    		}
+    		else {
+    			return cell.getNumericCellValue();
+    		}
+    		
+    	case BOOLEAN:
+    		return cell.getBooleanCellValue();
+    		
+    	case FORMULA:
+    		return cell.getCellFormula();
+    		
+    	case BLANK:
+    		return "";                   // Return empty string for blank cells
+    		
+    	default:
+    		return "";                  // Default to empty string for unknown types
+    		
+    	}
+    }
 
 }

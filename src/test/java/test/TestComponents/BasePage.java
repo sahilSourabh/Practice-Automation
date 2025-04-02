@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 
 public class BasePage {
 	
-	public static WebDriver driver;
+	public static WebDriver driver;  // Changed from static to instance variable
 
 	public static WebDriver initializeDriver() {
 
@@ -25,7 +25,11 @@ public class BasePage {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(2000);
-		driver.quit();
+//		driver.quit();
+		if (driver != null) {
+	        driver.quit();
+	        driver = null;   // Prevent using stale driver reference
+	    }
 	}
 
 }

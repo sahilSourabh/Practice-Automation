@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.PracticeTests.testPractice">
+      <class name="test.DataDrivenTests.DataDrivingUsingArrays">
         <methods>
           <include name="setUp"/>
-          <include name="getHeadingRowValues"/>
-          <include name="searchItemInAllPages"/>
-          <include name="getParticularColumnValuesForItem"/>
-          <include name="getRowsAndColumns"/>
-          <include name="getParticularColumnValues"/>
+          <include name="dataDrivenFromArrayTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- test.PracticeTests.testPractice -->
+      </class> <!-- test.DataDrivenTests.DataDrivingUsingArrays -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
