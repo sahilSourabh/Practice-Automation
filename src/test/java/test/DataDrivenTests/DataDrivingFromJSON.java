@@ -1,25 +1,22 @@
 package test.DataDrivenTests;
 
 import java.io.IOException;
-import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
 import test.TestComponents.BasePage;
 import test.TestComponents.BaseTest;
 
-public class DataDrivingUsingArrays extends BaseTest {
+public class DataDrivingFromJSON extends BaseTest{
 	
 	private ContactPage contactPage;
-
+	private String filePath = System.getProperty("user.dir")+"\\src\\test\\java\\test\\data\\TestData.json";
+	
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() {
 		
@@ -37,24 +34,21 @@ public class DataDrivingUsingArrays extends BaseTest {
 	
 	
 	@Test(priority = 1, dataProvider = "getData")
-	public void dataDrivenFromArrayTest(String title, String firstName, String lastName, String companyName) throws InterruptedException {
+	public void dataDrivingFromJSONTest(HashMap<String, String> input) throws InterruptedException {
 		
 		contactPage.clickOnNewContactLink();
-		contactPage.createNewContact(title, firstName, lastName, companyName);
+		contactPage.createNewContact(input.get("title"), input.get("firstName"), input.get("lastName"), input.get("companyName"));
 		sleep(2);
-		// Navigate back to "Contacts" for the next iteration
-//		driver.switchTo().defaultContent();
-//		driver.navigate().refresh();
-//		BaseTest.waitForframeAvailablityAndSwitchToIt("mainpanel");
-	}
-	
+	}	
 	
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		
-		Object[][] data = { { "Mr.","Ace","Kazuki","OPSCOG"}, { "Mr.","Goku","Son","DBZ"}};
-		return getObjectTestData(data);
+//		List<HashMap<String,String>> jsonData = getJSONData(filePath);
+//		Object[][] data = { {jsonData.get(0)},{jsonData.get(1)} };
+		Object[][] data = getJSONData(filePath);
 		
+		return BaseTest.getObjectTestData(data);
 	}
 
 }

@@ -1,149 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T23:48:27 IST" name="Default suite" finished-at="2025-04-02T23:50:36 IST" duration-ms="129163">
+  <suite started-at="2025-04-05T19:25:36 IST" name="Default suite" finished-at="2025-04-05T19:26:42 IST" duration-ms="66748">
     <groups>
     </groups>
-    <test started-at="2025-04-02T23:48:27 IST" name="Default test" finished-at="2025-04-02T23:50:36 IST" duration-ms="129163">
-      <class name="test.DataDrivenTests.DataDrivingUsingExcel">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:48:30 IST" name="setUp" finished-at="2025-04-02T23:48:55 IST" duration-ms="25373" status="PASS">
+    <test started-at="2025-04-05T19:25:36 IST" name="Default test" finished-at="2025-04-05T19:26:42 IST" duration-ms="66748">
+      <class name="test.DataDrivenTests.DataDrivingFromJSON">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:25:36 IST" name="setUp" finished-at="2025-04-05T19:26:02 IST" duration-ms="26220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dataDrivingFromExcelTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:48:55 IST" name="dataDrivingFromExcelTest" data-provider="getData" finished-at="2025-04-02T23:49:01 IST" duration-ms="5617" status="PASS">
+        <test-method signature="dataDrivingFromJSONTest(java.util.HashMap)[pri:1, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:02 IST" name="dataDrivingFromJSONTest" data-provider="getData" finished-at="2025-04-05T19:26:09 IST" duration-ms="7378" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Mr.]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Ace]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Kazuki]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[SCOG]]>
+                <![CDATA[{firstName=Son, lastName=Goku, title=Mr., companyName=DBZ}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dataDrivingFromExcelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:49:01 IST" name="tearDown" finished-at="2025-04-02T23:49:03 IST" duration-ms="2450" status="PASS">
+        </test-method> <!-- dataDrivingFromJSONTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:09 IST" name="tearDown" finished-at="2025-04-05T19:26:12 IST" duration-ms="2309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:49:03 IST" name="setUp" finished-at="2025-04-02T23:49:27 IST" duration-ms="23707" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:12 IST" name="setUp" finished-at="2025-04-05T19:26:34 IST" duration-ms="21949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dataDrivingFromExcelTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:49:27 IST" name="dataDrivingFromExcelTest" data-provider="getData" finished-at="2025-04-02T23:49:33 IST" duration-ms="5439" status="PASS">
+        <test-method signature="dataDrivingFromJSONTest(java.util.HashMap)[pri:1, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:34 IST" name="dataDrivingFromJSONTest" data-provider="getData" finished-at="2025-04-05T19:26:40 IST" duration-ms="6133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Mr.]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Kim]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Jiwo]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[SCOG]]>
+                <![CDATA[{firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dataDrivingFromExcelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:49:33 IST" name="tearDown" finished-at="2025-04-02T23:49:35 IST" duration-ms="2340" status="PASS">
+        </test-method> <!-- dataDrivingFromJSONTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:40 IST" name="tearDown" finished-at="2025-04-05T19:26:42 IST" duration-ms="2422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:49:35 IST" name="setUp" finished-at="2025-04-02T23:49:58 IST" duration-ms="23439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="dataDrivingFromExcelTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:49:58 IST" name="dataDrivingFromExcelTest" data-provider="getData" finished-at="2025-04-02T23:50:04 IST" duration-ms="5365" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Miss]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Nico]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Robin]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[OP]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDrivingFromExcelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:50:04 IST" name="tearDown" finished-at="2025-04-02T23:50:06 IST" duration-ms="2423" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:50:06 IST" name="setUp" finished-at="2025-04-02T23:50:29 IST" duration-ms="23023" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="dataDrivingFromExcelTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:50:29 IST" name="dataDrivingFromExcelTest" data-provider="getData" finished-at="2025-04-02T23:50:34 IST" duration-ms="4796" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mr.]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Portgas]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[D Ace]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[OP]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDrivingFromExcelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingUsingExcel@1ff4931d]" started-at="2025-04-02T23:50:34 IST" name="tearDown" finished-at="2025-04-02T23:50:36 IST" duration-ms="2407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- test.DataDrivenTests.DataDrivingUsingExcel -->
+      </class> <!-- test.DataDrivenTests.DataDrivingFromJSON -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

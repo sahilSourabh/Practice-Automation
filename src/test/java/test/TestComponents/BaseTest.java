@@ -3,7 +3,10 @@ package test.TestComponents;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
 import javax.mail.Authenticator;
@@ -36,6 +39,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BaseTest extends BasePage {
 	
@@ -166,6 +172,8 @@ public class BaseTest extends BasePage {
     	wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_IN_SECONDS));
         return wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
     }
+    
+    
 //   ----------------------------------------------------------------------------------------------------------------
     
     public static Object[][] getObjectTestData(Object [][] data) throws IOException {	
@@ -231,5 +239,29 @@ public class BaseTest extends BasePage {
     		
     	}
     }
+    
+    /*
+    public static HashMap<String, String> getHashmapTestData(HashMap<String,String> map) {
+		return map;	
+    }
+    */
 
+    public static Object[][] getJSONData(String filepath) throws IOException {
+    	
+    	File file = new File(filepath);
+    	//JSON to String
+    	String jsonContent = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+    	//String to HashMap
+    	ObjectMapper mapper = new ObjectMapper();
+    	List<HashMap<String, String>> dataList = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
+    	
+    	Object[][] data = new Object[dataList.size()][1];       // [dataList.size()] = number of test cases (rows).
+    														   // [1] -> Each row has only one column (the HashMap).
+    	for(int i=0;i<dataList.size();i++) {
+    		
+    		data[i][0] = dataList.get(i);
+    	}
+    	return data;
+    	
+    }
 }
