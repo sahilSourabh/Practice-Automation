@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse--2087041483\testng-customsuite.xml</span>
+                    <span>C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse-993951801\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.DataDrivenTests.DataDrivingFromJSON" class="method navigator-link" hash-for-method="dataDrivingFromJSONTest({firstName=Son, lastName=Goku, title=Mr., companyName=DBZ})">dataDrivingFromJSONTest({firstName=Son, lastName=Goku, title=Mr., companyName=DBZ})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.DataDrivenTests.DataDrivingFromDatabase" class="method navigator-link" hash-for-method="dataDrivingFromJSONTest({firstName=Son, lastName=Goku, title=Mr., companyName=DBZ})">dataDrivingFromJSONTest({firstName=Son, lastName=Goku, title=Mr., companyName=DBZ})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="test.DataDrivenTests.DataDrivingFromJSON" class="method navigator-link" hash-for-method="dataDrivingFromJSONTest({firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP})">dataDrivingFromJSONTest({firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.DataDrivenTests.DataDrivingFromDatabase" class="method navigator-link" hash-for-method="dataDrivingFromJSONTest({firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ})">dataDrivingFromJSONTest({firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,7 +126,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.DataDrivenTests.DataDrivingFromJSON</span>
+              <span class="class-name">test.DataDrivenTests.DataDrivingFromDatabase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -139,10 +139,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="dataDrivingFromJSONTest({firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP})">
-                  </a> <!-- dataDrivingFromJSONTest({firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP}) -->
+                  <a name="dataDrivingFromJSONTest({firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ})">
+                  </a> <!-- dataDrivingFromJSONTest({firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ}) -->
                   <span class="method-name">dataDrivingFromJSONTest</span>
-                  <span class="parameters">({firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP})</span>
+                  <span class="parameters">({firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,7 +150,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse--2087041483\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Sourabh Sahil\AppData\Local\Temp\testng-eclipse-993951801\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -159,11 +159,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.DataDrivenTests.DataDrivingFromJSON&quot;&gt;
+      &lt;class name=&quot;test.DataDrivenTests.DataDrivingFromDatabase&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;dataDrivingFromJSONTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.DataDrivenTests.DataDrivingFromJSON --&gt;
+      &lt;/class&gt; &lt;!-- test.DataDrivenTests.DataDrivingFromDatabase --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -206,17 +206,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'dataDrivingFromJSONTest')
-data.setCell(0, 2, 'test.DataDrivenTests.DataDrivingFromJSON')
-data.setCell(0, 3, 7378);
+data.setCell(0, 2, 'test.DataDrivenTests.DataDrivingFromDatabase')
+data.setCell(0, 3, 8342);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'dataDrivingFromJSONTest')
-data.setCell(1, 2, 'test.DataDrivenTests.DataDrivingFromJSON')
-data.setCell(1, 3, 6133);
+data.setCell(1, 2, 'test.DataDrivenTests.DataDrivingFromDatabase')
+data.setCell(1, 3, 7752);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -242,30 +242,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.DataDrivenTests.DataDrivingFromJSON</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.DataDrivenTests.DataDrivingFromDatabase</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">dataDrivingFromJSONTest({firstName=Son, lastName=Goku, title=Mr., companyName=DBZ})</span>
-                <span class="method-start">26220 ms</span>
+                <span class="method-start">25995 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">33603 ms</span>
+                <span class="method-start">33759 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">35913 ms</span>
+                <span class="method-start">37311 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">dataDrivingFromJSONTest({firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP})</span>
-                <span class="method-start">57862 ms</span>
+                <span class="method-name">dataDrivingFromJSONTest({firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ})</span>
+                <span class="method-start">60195 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">64016 ms</span>
+                <span class="method-start">68545 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

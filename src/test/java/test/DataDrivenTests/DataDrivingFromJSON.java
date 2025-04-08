@@ -48,7 +48,7 @@ public class DataDrivingFromJSON extends BaseTest{
 //		Object[][] data = { {jsonData.get(0)},{jsonData.get(1)} };
 		Object[][] data = getJSONData(filePath);
 		
-		return BaseTest.getObjectTestData(data);
+		return getObjectTestData(data);
 	}
 
 }

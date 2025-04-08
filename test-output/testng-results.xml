@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-05T19:25:36 IST" name="Default suite" finished-at="2025-04-05T19:26:42 IST" duration-ms="66748">
+  <suite started-at="2025-04-08T23:39:39 IST" name="Default suite" finished-at="2025-04-08T23:40:52 IST" duration-ms="73200">
     <groups>
     </groups>
-    <test started-at="2025-04-05T19:25:36 IST" name="Default test" finished-at="2025-04-05T19:26:42 IST" duration-ms="66748">
-      <class name="test.DataDrivenTests.DataDrivingFromJSON">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:25:36 IST" name="setUp" finished-at="2025-04-05T19:26:02 IST" duration-ms="26220" status="PASS">
+    <test started-at="2025-04-08T23:39:39 IST" name="Default test" finished-at="2025-04-08T23:40:52 IST" duration-ms="73200">
+      <class name="test.DataDrivenTests.DataDrivingFromDatabase">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingFromDatabase@1190200a]" started-at="2025-04-08T23:39:40 IST" name="setUp" finished-at="2025-04-08T23:40:06 IST" duration-ms="25993" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dataDrivingFromJSONTest(java.util.HashMap)[pri:1, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:02 IST" name="dataDrivingFromJSONTest" data-provider="getData" finished-at="2025-04-05T19:26:09 IST" duration-ms="7378" status="PASS">
+        <test-method signature="dataDrivingFromJSONTest(java.util.HashMap)[pri:1, instance:test.DataDrivenTests.DataDrivingFromDatabase@1190200a]" started-at="2025-04-08T23:40:06 IST" name="dataDrivingFromJSONTest" data-provider="getData" finished-at="2025-04-08T23:40:14 IST" duration-ms="7752" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,30 +22,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivingFromJSONTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:09 IST" name="tearDown" finished-at="2025-04-05T19:26:12 IST" duration-ms="2309" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingFromDatabase@1190200a]" started-at="2025-04-08T23:40:14 IST" name="tearDown" finished-at="2025-04-08T23:40:17 IST" duration-ms="3549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:12 IST" name="setUp" finished-at="2025-04-05T19:26:34 IST" duration-ms="21949" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.DataDrivenTests.DataDrivingFromDatabase@1190200a]" started-at="2025-04-08T23:40:17 IST" name="setUp" finished-at="2025-04-08T23:40:40 IST" duration-ms="22884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dataDrivingFromJSONTest(java.util.HashMap)[pri:1, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:34 IST" name="dataDrivingFromJSONTest" data-provider="getData" finished-at="2025-04-05T19:26:40 IST" duration-ms="6133" status="PASS">
+        <test-method signature="dataDrivingFromJSONTest(java.util.HashMap)[pri:1, instance:test.DataDrivenTests.DataDrivingFromDatabase@1190200a]" started-at="2025-04-08T23:40:40 IST" name="dataDrivingFromJSONTest" data-provider="getData" finished-at="2025-04-08T23:40:48 IST" duration-ms="8342" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{firstName=Ace, lastName=Kazuki, title=Mr., companyName=SCOGOP}]]>
+                <![CDATA[{firstName=Son, lastName=Gohan, title=Mr., companyName=DBZ}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivingFromJSONTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingFromJSON@5aebe890]" started-at="2025-04-05T19:26:40 IST" name="tearDown" finished-at="2025-04-05T19:26:42 IST" duration-ms="2422" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.DataDrivenTests.DataDrivingFromDatabase@1190200a]" started-at="2025-04-08T23:40:48 IST" name="tearDown" finished-at="2025-04-08T23:40:52 IST" duration-ms="3581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.DataDrivenTests.DataDrivingFromJSON -->
+      </class> <!-- test.DataDrivenTests.DataDrivingFromDatabase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

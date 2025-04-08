@@ -1,6 +1,8 @@
 package test.TestComponents;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,8 +16,15 @@ public class BasePage {
 
 	public static WebDriver initializeDriver() {
 
-		driver = new ChromeDriver();
-//		driver = new EdgeDriver();
+	    ChromeOptions options = new ChromeOptions();
+	    Map<String, Object> prefs = new HashMap<>();
+	    prefs.put("credentials_enable_service", false);
+	    prefs.put("profile.password_manager_enabled", false);
+	    options.setExperimentalOption("prefs", prefs);
+	    options.addArguments("--disable-notifications"); // optional for other browser popups
+
+//		driver = new ChromeDriver(options);
+		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 

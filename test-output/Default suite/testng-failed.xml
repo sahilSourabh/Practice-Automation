@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.DataDrivenTests.DataDrivingFromJSON">
+      <class name="test.DataDrivenTests.DataDrivingFromDatabase">
         <methods>
-          <include name="dataDrivingFromJSONTest"/>
-          <include name="tearDown"/>
+          <include name="dataDrivingFromJSONTest" invocation-numbers="0"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- test.DataDrivenTests.DataDrivingFromJSON -->
+      </class> <!-- test.DataDrivenTests.DataDrivingFromDatabase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -246,6 +246,7 @@ public class BaseTest extends BasePage {
     }
     */
 
+    // Get the data from JSON File
     public static Object[][] getJSONData(String filepath) throws IOException {
     	
     	File file = new File(filepath);
